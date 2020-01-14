@@ -5,13 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Speech-to-text</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <style type="text/css">
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #result{
+            height: 200px;
+            border: 1px solid #ccc;
+            padding:10px;
+            box-shadow: 0 0 10px 0 #bbb;
+            margin-bottom: 30px;
+            font-size: 14px;
+            line-height: 25px;
+        }
+        button{
+            font-size: 20px;
+            position: absolute;
+            top: 240px;
+            left: 50%;
+        }
+    </style>
     </head>
 <body>
-    <h4 style="align-content: center;">Speech to text converter</h4>
+    <h4 style="text-align: center;">Speech to text converter</h4>
     <!-- show the converted result -->
     <div id="result"></div>
 
     <!-- button to start speech recognition -->
-    <button> <i class="fa fa-microphone"></i></button>
+    <button><i class="fas fa-microphone"></i></button>
+
 </body>
 </html>
