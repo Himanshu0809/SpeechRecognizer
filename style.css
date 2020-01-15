@@ -1,27 +1,43 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+}
+
+.heading{
+    font-size: 300%;
+    text-align: center;
+    margin:7%;
 }
 
 #result {
+    background: #C6FFDD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 200px;
-    border: 1px solid #ccc;
+    color: black;
+    border-radius: 15%;
+    border-top: 15px solid orangered;
+    border-left: 15px solid orangered;
     padding: 10px;
-    box-shadow: 0 0 10px 0 #bbb;
+    box-shadow: 0 0 20px 0 orange;
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 25px;
+    margin-top:7%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .startbtn {
     font-size: 20px;
     position: absolute;
-    top: 240px;
     left: 48%;
 }
 
 .stopbtn {
     font-size: 20px;
     position: absolute;
-    top: 240px;
     left: 51%;
 }
