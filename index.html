@@ -10,29 +10,7 @@
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-    <style type="text/css">
-        body {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-
-        #result {
-            height: 200px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            box-shadow: 0 0 10px 0 #bbb;
-            margin-bottom: 30px;
-            font-size: 14px;
-            line-height: 25px;
-        }
-
-        button {
-            font-size: 20px;
-            position: absolute;
-            top: 240px;
-            left: 50%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -41,44 +19,11 @@
     <div id="result"></div>
 
     <!-- button to start speech recognition -->
-    <button onclick="startConverting()"><i class="fas fa-microphone"></i></button>
 
-    <script type="text/javascript">
-        var r = document.getElementById('result');
+    <button class="startbtn" onclick="startConverting()"><i class="fas fa-microphone"></i></button>
+    <button class="stopbtn" onclick="stopConverting()"><i class="fas fa-microphone-slash"></i></button>
 
-        function startConverting() {
-            if ('webkitSpeechRecognition' in window) {
-
-                var speechRecognizer = new webkitSpeechRecognition();
-                speechRecognizer.continuous = true; // to make sure that if the user stops talking the speech recognition do not end
-                speechRecognizer.interimResults = true; //to make sure that the interim reults returned by the speechRecognizer can be changed
-                speechRecognizer.lang = 'en-IN';
-                speechRecognizer.start();   //start listening
-
-                var finalTranscripts = '';
-
-                speechRecognizer.onresult = function (event) {
-                    var interimTranscripts = '';
-                    for (var i = event.resultIndex; i < event.results.length; i++) {
-                        var transcript = event.results[i][0].transcript;
-                        transcript.replace("\n", "<br>");
-                        if (event.results[i].isFinal) {
-                            finalTranscripts += transcript;
-                        } else {
-                            interimTranscripts += transcript;
-                        }
-                    }
-                    r.innerHTML = finalTranscripts + '<span style="color:#999">' + interimTranscripts + '</span>';
-                };
-
-                speechRecognizer.onerror = function (event) {
-
-                };
-            } else {
-                r.innerHTML='Your browser is not supported. If google chrome, please upgrade!';
-            }
-        }
-    </script>
+    <script type="text/javascript" src="index.js"></script>
 
 </body>
 
