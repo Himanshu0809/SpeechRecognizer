@@ -17,13 +17,51 @@
     <h4 class="heading">
         <strong><u>Speech-to-Text Converter</u></strong>
     </h4>
-    <!-- show the converted result -->
-    <div id="result"></div>
 
-    <!-- button to start speech recognition -->
+    <div class="complaint">
+        <h2 class="subheading">Complaint</h2>
+        <button class="complaintstartbtn" onclick="cstartConverting()"><i class="fas fa-microphone"></i></button>
+        <button class="complaintstopbtn" onclick="cstopConverting()"><i class="fas fa-microphone-slash"></i></button>
+        <br>
+        <br>
+        <div id="complaint"></div>
 
-    <button class="startbtn" onclick="startConverting()"><i class="fas fa-microphone"></i></button>
-    <button class="stopbtn" onclick="stopConverting()"><i class="fas fa-microphone-slash"></i></button>
+    </div>
+
+
+    <div class="diagnosis">
+        <h2 class="subheading">Diagnosis</h2>
+        <button class="dstartbtn" onclick="dstartConverting()"><i class="fas fa-microphone"></i></button>
+        <button class="dstopbtn" onclick="dstopConverting()"><i class="fas fa-microphone-slash"></i></button>
+        <br>
+        <br>
+        <div id="diagnosis"></div>
+
+    </div>
+
+    <div class="med">
+        <h2 class="subheading">Medicine and Timings</h2>
+        <button class="mstartbtn" onclick="mstartConverting()"><i class="fas fa-microphone"></i></button>
+        <button class="mstopbtn" onclick="mstopConverting()"><i class="fas fa-microphone-slash"></i></button>
+        <br>
+        <br>
+        <div id="med"></div>
+
+    </div>
+
+    <div class="precautions">
+        <h2 class="subheading">Precautions</h2>
+        <!-- button to start speech recognition -->
+
+        <button class="startbtn" onclick="startConverting()"><i class="fas fa-microphone"></i></button>
+        <button class="stopbtn" onclick="stopConverting()"><i class="fas fa-microphone-slash"></i></button>
+        <br>
+        <br>
+        <!-- show the converted result -->
+        <div id="result"></div>
+
+
+    </div>
 
     <script type="text/javascript" src="index.js"></script>
 
